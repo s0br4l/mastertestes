@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<br/>
+<h1> Medidas antropométricas </h1><br/>
+
+{% if submitted %}
+    Medidas cadastradas com sucesso!
+
+{% else %}
+
+<form class="mb-3 row" action="" method="POST">
+    {% csrf_token %}
+<div class="col-sm-7">
+    {{ form.as_p }}
+
+    <input type="submit" value="Salvar" class="btn btn-outline-danger">
+</div>
+
+
+</form>
+
+{% endif %}
+
+{% endblock %}

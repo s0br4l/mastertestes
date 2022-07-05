@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<br/>
+<h1> Lista de quem ainda falta alguma medida (?): </h1><br/>
+
+
+{% for usuario in lista %}
+        {{ usuario }}
+{% endfor %}
+
+
+{% endblock %}
